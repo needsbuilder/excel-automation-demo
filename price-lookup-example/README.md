@@ -48,3 +48,7 @@ python3 -m unittest -v test_acceptance.py
 상품명이 같아도 코드가 다르면 매칭하지 않습니다. 이름 추정·유사 매칭, 거래처별 가격, 기간별 단가, 할인, 세금, 통화 변환은 포함하지 않습니다. 현재 코드의 주문ID는 한 주문 행을 뜻합니다. 여러 상품을 포함하는 실제 주문은 주문행ID 등 별도 중복 기준을 정해야 합니다.
 
 실제 Microsoft Excel·VBA·Apps Script 실행 및 외부 주문 시스템 연동은 미검증입니다. CSV 입력을 Python으로 확인한 예시이며 엑셀 수식을 자동으로 설치하는 파일은 아닙니다. 공개 댓글에 파일이나 개인정보를 올리지 마세요. 실제 작업 상담은 [크몽 니즈랩 서비스](https://kmong.com/gig/824498)의 메시지에서 개인정보를 가린 샘플·원하는 결과·실행 환경을 확인한 뒤 진행합니다.
+
+## 코드 설치 없이 확인하기
+
+[브라우저 단가 조회 실행 예시](https://needsbuilder.github.io/excel-automation-demo/price-lookup-example.html)에서 같은 가상 주문 8행을 확인하고 0001 단가를 바꿔 결과 CSV를 받을 수 있습니다. 고객 파일 업로드나 서버 전송은 없습니다. CSV의 상품코드는 문자로 가져오세요. Excel에서 CSV를 바로 열면 앞자리 0이 없어질 수 있습니다. 실제 Excel 앱·VBA·Apps Script 실행 검증을 의미하지 않습니다.

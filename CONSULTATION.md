@@ -8,9 +8,9 @@
 | 합계가 맞지 않거나 수식 범위가 빠졌다 | [합계 수식 수정](https://needsbuilder.github.io/excel-automation-demo/formula-example.html) | 문제 셀, 현재 수식, 기대값 |
 | 주문과 입금을 매번 대조한다 | [주문·입금 대조](https://needsbuilder.github.io/excel-automation-demo/reconcile-example.html) | 연결할 ID, 분할 입금 여부 |
 | 부족한 재고를 찾는다 | [재고 점검 Python 코드](inventory-example/README.md) | 재고·예약·목표 수량, 중복 품목 규칙 |
-| 상품코드로 단가를 찾아 계산한다 | [단가 조회 Python 코드](price-lookup-example/README.md) | 단가표, 없는 코드·중복 단가 규칙 |
+| 상품코드로 단가를 찾아 계산한다 | [단가 조회 실행](https://needsbuilder.github.io/excel-automation-demo/price-lookup-example.html) | 단가표, 없는 코드·중복 단가 규칙 |
 
-파일 취합·주문 대조는 브라우저에서 실행할 수 있고 재고·단가 조회는 Python 예시입니다. 수식 수정 XLSX는 계산 결과와 입력 변경을 검증했지만 실제 Microsoft Excel 앱 실행은 미검증입니다. 이 자료들은 VBA·Apps Script나 외부 시스템 연동을 실행해 검증한 예시가 아닙니다.
+파일 취합·주문 대조·단가 조회는 브라우저에서 실행할 수 있고 재고 점검은 Python 예시입니다. 단가 조회는 같은 가상 CSV와 규칙을 Python과 브라우저에서 각각 검증합니다. 수식 수정 XLSX는 계산 결과와 입력 변경을 검증했지만 실제 Microsoft Excel 앱 실행은 미검증입니다. 이 자료들은 VBA·Apps Script나 외부 시스템 연동을 실행해 검증한 예시가 아닙니다.
 
 ## 이 내용을 크몽 메시지로 보내주세요
 
