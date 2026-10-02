@@ -14,7 +14,10 @@ def write_csv(path, fields, rows):
     with path.open('w', encoding='utf-8-sig', newline='') as f:
         w = csv.DictWriter(f, fieldnames=fields)
         w.writeheader()
-        w.writerows(rows)
+        # Source filenames can begin with Excel formula characters too.
+        # Keep original values in the JSON report; protect CSV presentation.
+        w.writerows({key: "'" + value if isinstance(value, str) and value.lstrip().startswith(('=', '+', '-', '@')) else value
+                     for key, value in row.items()} for row in rows)
 
 def merge(source, output):
     paths = sorted(source.glob('*.csv'))
