@@ -1,0 +1,36 @@
+{
+  "verified_at": "2026-10-02T07:44:50.991Z",
+  "synthetic_data": true,
+  "engine": "Artifact Tool",
+  "excel_app_executed": false,
+  "independent_expected_total": 132000,
+  "baseline": [
+    112000,
+    132000,
+    20000
+  ],
+  "cases": [
+    {
+      "input_cell": "C15",
+      "value": 3,
+      "expected_total": 142000,
+      "actual_total": 142000
+    },
+    {
+      "input_cell": "C15",
+      "value": 0,
+      "expected_total": 112000,
+      "actual_total": 112000
+    },
+    {
+      "input_cell": "C15",
+      "value": null,
+      "expected_total": 112000,
+      "actual_total": 112000
+    }
+  ],
+  "xlsx_import_baseline_verified": true,
+  "xlsx_import_recalculation_verified": true,
+  "error_scan": "{\"kind\":\"notice\",\"message\":\"Cell search matched 0 entries.\"}",
+  "visual_review": "전체 1시트의 제목, 숫자, 수식 설명, 사용법을 렌더링해 확인"
+}

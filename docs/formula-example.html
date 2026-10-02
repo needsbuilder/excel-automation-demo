@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>합계 수식 수정 예시 | 니즈랩</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header class="shell masthead"><a href="index.html">NEEDSLAB / 니즈랩</a><span>FORMULA EXAMPLE</span></header>
+<main class="shell">
+<section class="hero"><p class="eyebrow">가상 데이터로 만든 작업 예시</p><h1>합계에서 빠진<br>마지막 행을 찾습니다.</h1><p class="intro">주문 5건 중 마지막 1건이 SUM 범위에서 빠진 오류입니다.<br>기존 5행의 합계 수식 1개를 수정했습니다.</p><div class="actions"><a class="secondary" href="downloads/formula-repair-example.xlsx" download>수정 전·후 엑셀 파일 받기 ↓</a></div></section>
+<section class="notes"><div><p class="eyebrow">수정 전·후</p><h2>112,000원에서<br>132,000원으로.</h2></div><ul><li>수정 전: <code>=SUM(E11:E14)</code>로 4행만 합산</li><li>수정 후: <code>=SUM(E11:E15)</code>로 5행 합산</li><li>누락된 마지막 주문: 2개 × 10,000원 = 20,000원</li><li>노란색 수량·단가를 바꾸면 금액과 합계가 재계산됩니다.</li></ul></section>
+<img src="formula-example.png" alt="가상 주문 5건의 합계 수식 수정 전 112000원, 수정 후 132000원을 보여주는 엑셀 예시" style="display:block;width:100%;height:auto;margin:2rem 0">
+<section class="notes"><div><p class="eyebrow">검증 결과</p><h2>입력 변경도<br>대조했습니다.</h2></div><ul><li>별도 계산 합계 132,000원과 수정 결과 일치</li><li>마지막 수량 2 → 3: 수정 합계 142,000원</li><li>마지막 수량 0 또는 빈칸: 수정 합계 112,000원</li><li>XLSX를 다시 읽은 후 합계와 입력 변경 재계산 확인</li><li><a href="formula-validation.json">검증 결과 JSON 보기</a></li></ul></section>
+<p class="boundary">Artifact Tool로 수식 재계산과 시각 검수를 했습니다. 실제 Microsoft Excel 앱에서 실행하지 않았으며 VBA·Apps Script 예시가 아닙니다. 기존 5행의 수식 범위 수정 예시로, 행을 추가하면 SUM 범위도 늘려야 합니다. 실제 고객 자료나 납품 실적이 아닙니다.</p>
+<p>수식 오류 수정 또는 계산식 1개 작성은 크몽 STANDARD 패키지 범위의 예시입니다. 현재 파일·원하는 결과·엑셀 버전을 <a href="https://kmong.com/gig/824498">크몽 메시지</a>로 알려주시면 구매 전 범위를 확인합니다. 가격·일정·수정 조건은 크몽의 최신 공개 상품을 확인해 주세요.</p>
+</main><footer class="shell"><a href="index.html">CSV 파일 취합 예시 보기</a><a href="https://github.com/needsbuilder/excel-automation-demo">예시 파일과 검증 내용 보기</a></footer>
+</body></html>
