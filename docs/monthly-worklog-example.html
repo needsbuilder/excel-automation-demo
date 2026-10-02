@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>월별 업무시간 집계 예시 | 니즈랩</title><meta name="description" content="가상 기록 9건을 월별로 집계하고 중복·잘못된 날짜를 분리하는 Python 작업 예시. 입력·코드·검증 결과를 확인하세요."><link rel="stylesheet" href="style.css"></head>
+<body>
+<header class="shell masthead"><a href="index.html">NEEDSLAB / 니즈랩</a><span>MONTHLY REPORT EXAMPLE</span></header>
+<main class="shell">
+<section class="hero"><p class="eyebrow">가상 데이터로 만든 작업 예시</p><h1>월별 시간은 더하고,<br>잘못된 기록은 확인.</h1><p class="intro">기록 9건에서 정상 5건·확인 4건을 나눕니다.<br>중복 ID와 존재하지 않는 날짜를 합계에 넣지 않습니다.</p><div class="actions"><a class="secondary" href="downloads/monthly-worklog-sample.zip" download>입력·코드·결과 ZIP 받기 ↓</a><a class="secondary" href="https://github.com/needsbuilder/excel-automation-demo/tree/main/monthly-worklog-example">Python 실행 방법 ↗</a></div><p class="micro">이 화면은 검증한 결과 안내입니다. 내려받은 예시는 Python 3에서 실행합니다.</p></section>
+<section class="notes"><div><p class="eyebrow">검증한 결과</p><h2>300분 합계와<br>기록의 출처.</h2></div><div><table><caption>정상 5건의 달별 합계</caption><thead><tr><th scope="col">달</th><th scope="col">시간 / 분</th></tr></thead><tbody><tr><td>2026-09</td><td>60</td></tr><tr><td>2026-10</td><td>120</td></tr><tr><td>2027-01</td><td>120</td></tr></tbody></table><p>합계 300분(5시간). 확인 기록 6·7: ID 중복 / 8: 9월 31일 / 9: 음수 시간.</p></div></section>
+<section class="notes"><div><p class="eyebrow">입력 변경과 예외</p><h2>날짜가 바뀌면<br>집계 달도 바뀝니다.</h2></div><ul><li>첫 기록을 10월 1일·90분으로 변경: 10월 210분, 2027년 1월 120분, 전체 330분</li><li>윤년·연도 경계와 잘못된 날짜를 구분</li><li>0분과 빈값, 소수·문자·음수 입력을 구분</li><li>중복 ID의 모든 기록을 확인 내역으로 분리</li><li>원본과 기존 결과를 덮어쓰지 않음</li><li><a href="https://github.com/needsbuilder/excel-automation-demo/blob/main/monthly-worklog-example/validation.json">5개 수락 테스트 검증 기록</a></li></ul></section>
+<p class="boundary">실제 고객 자료나 납품 실적이 아닌 가상 작업 예시입니다. JSON 입력과 Python 표준 라이브러리로 검증했습니다. 실제 Microsoft Excel·VBA·Apps Script 및 외부 업무 시스템 연동은 미검증입니다. 급여·수당·근무 평가, 야간 근무 분할, 휴게시간 차감과 시간대 변환은 포함하지 않습니다. 직원별·프로젝트별 집계는 실제 파일과 규칙을 확인해야 합니다.</p>
+<p>현재 사용하는 파일의 개인정보를 가린 샘플과 원하는 집계표, 중복·취소 처리 기준, 실행 환경을 <a href="https://kmong.com/gig/824498">크몽 메시지</a>로 알려주시면 구매 전 범위와 검증 환경을 확인합니다. 고객 파일은 크몽 메시지 첨부로 받습니다. 가격·일정·수정 조건은 크몽의 최신 공개 상품에서 확인하세요.</p>
+</main><footer class="shell"><a href="index.html">CSV 취합 실행 예시</a><a href="https://github.com/needsbuilder/excel-automation-demo/blob/main/CONSULTATION.md">문의 준비 안내</a><a href="https://kmong.com/gig/824498">크몽 서비스 · 문의 ↗</a></footer>
+</body></html>

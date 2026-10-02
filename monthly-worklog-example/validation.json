@@ -1,0 +1,45 @@
+{
+  "verified_at": "2026-10-02T18:53:35.720266+00:00",
+  "fictional_example": true,
+  "tests": "5 acceptance tests passed",
+  "baseline": {
+    "input_records": 9,
+    "accepted_records": 5,
+    "review_records": 4,
+    "total_minutes": 300,
+    "months": [
+      {
+        "month": "2026-09",
+        "minutes": 60
+      },
+      {
+        "month": "2026-10",
+        "minutes": 120
+      },
+      {
+        "month": "2027-01",
+        "minutes": 120
+      }
+    ]
+  },
+  "changed_first_record": {
+    "date": "2026-10-01",
+    "minutes": 90,
+    "total_minutes": 330,
+    "months": [
+      {
+        "month": "2026-10",
+        "minutes": 210
+      },
+      {
+        "month": "2027-01",
+        "minutes": 120
+      }
+    ]
+  },
+  "source_and_existing_output_preserved": true,
+  "date_leap_year_and_year_boundary_verified": true,
+  "blank_zero_boolean_and_fraction_distinguished": true,
+  "excel_app_executed": false,
+  "external_system_integrated": false
+}

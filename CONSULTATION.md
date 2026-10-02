@@ -1,16 +1,17 @@
 # 내 업무에 맞는 예시와 문의 준비 안내
 
-다섯 자료는 모두 **가상 데이터로 만든 작업 예시**입니다. 실제 고객 자료나 납품 실적이 아니며, 실제 작업의 파일 구조와 처리 규칙은 구매 전에 확인합니다.
+여섯 자료는 모두 **가상 데이터로 만든 작업 예시**입니다. 실제 고객 자료나 납품 실적이 아니며, 실제 작업의 파일 구조와 처리 규칙은 구매 전에 확인합니다.
 
 | 지금 불편한 일 | 먼저 볼 예시 | 함께 알려주세요 |
 | --- | --- | --- |
 | 여러 CSV를 복사해 합친다 | [파일 취합 실행](https://needsbuilder.github.io/excel-automation-demo/) | 파일 개수, 열 이름, 중복 판단 기준 |
 | 합계가 맞지 않거나 수식 범위가 빠졌다 | [합계 수식 수정](https://needsbuilder.github.io/excel-automation-demo/formula-example.html) | 문제 셀, 현재 수식, 기대값 |
 | 주문과 입금을 매번 대조한다 | [주문·입금 대조](https://needsbuilder.github.io/excel-automation-demo/reconcile-example.html) | 연결할 ID, 분할 입금 여부 |
-| 부족한 재고를 찾는다 | [재고 점검 Python 코드](inventory-example/README.md) | 재고·예약·목표 수량, 중복 품목 규칙 |
+| 부족한 재고를 찾는다 | [재고 점검 실행](https://needsbuilder.github.io/excel-automation-demo/inventory-example.html) | 재고·예약·목표 수량, 중복 품목 규칙 |
 | 상품코드로 단가를 찾아 계산한다 | [단가 조회 실행](https://needsbuilder.github.io/excel-automation-demo/price-lookup-example.html) | 단가표, 없는 코드·중복 단가 규칙 |
+| 날짜가 있는 업무 기록을 월별로 더한다 | [월별 업무시간 집계](https://needsbuilder.github.io/excel-automation-demo/monthly-worklog-example.html) | 날짜·시간 형식, 중복·취소 처리 기준 |
 
-파일 취합·주문 대조·단가 조회는 브라우저에서 실행할 수 있고 재고 점검은 Python 예시입니다. 단가 조회는 같은 가상 CSV와 규칙을 Python과 브라우저에서 각각 검증합니다. 수식 수정 XLSX는 계산 결과와 입력 변경을 검증했지만 실제 Microsoft Excel 앱 실행은 미검증입니다. 이 자료들은 VBA·Apps Script나 외부 시스템 연동을 실행해 검증한 예시가 아닙니다.
+파일 취합·주문 대조·재고 점검·단가 조회는 브라우저에서 실행할 수 있습니다. 재고 점검과 단가 조회는 같은 가상 입력과 규칙을 Python과 브라우저에서 각각 검증합니다. 월별 업무시간 집계는 JSON 입력을 Python으로 계산하는 다운로드 예시입니다. 수식 수정 XLSX는 계산 결과와 입력 변경을 검증했지만 실제 Microsoft Excel 앱 실행은 미검증입니다. 이 자료들은 VBA·Apps Script나 외부 시스템 연동을 실행해 검증한 예시가 아닙니다.
 
 ## 이 내용을 크몽 메시지로 보내주세요
 

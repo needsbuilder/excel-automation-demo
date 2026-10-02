@@ -1,0 +1,82 @@
+{
+  "input_records": 9,
+  "accepted_records": 5,
+  "review_records": 4,
+  "total_minutes": 300,
+  "months": [
+    {
+      "month": "2026-09",
+      "minutes": 60
+    },
+    {
+      "month": "2026-10",
+      "minutes": 120
+    },
+    {
+      "month": "2027-01",
+      "minutes": 120
+    }
+  ],
+  "accepted": [
+    {
+      "source_record": 1,
+      "record_id": "0001",
+      "date": "2026-09-30",
+      "minutes": 60
+    },
+    {
+      "source_record": 2,
+      "record_id": "0002",
+      "date": "2026-10-01",
+      "minutes": 90
+    },
+    {
+      "source_record": 3,
+      "record_id": "0003",
+      "date": "2026-10-05",
+      "minutes": 30
+    },
+    {
+      "source_record": 4,
+      "record_id": "0004",
+      "date": "2027-01-01",
+      "minutes": 45
+    },
+    {
+      "source_record": 5,
+      "record_id": "0005",
+      "date": "2027-01-02",
+      "minutes": 75
+    }
+  ],
+  "review": [
+    {
+      "source_record": 6,
+      "record_id": "DUP",
+      "reasons": [
+        "duplicate record ID; all occurrences need review"
+      ]
+    },
+    {
+      "source_record": 7,
+      "record_id": "DUP",
+      "reasons": [
+        "duplicate record ID; all occurrences need review"
+      ]
+    },
+    {
+      "source_record": 8,
+      "record_id": "0008",
+      "reasons": [
+        "invalid calendar date"
+      ]
+    },
+    {
+      "source_record": 9,
+      "record_id": "0009",
+      "reasons": [
+        "minutes must be an integer from 0 to 1440"
+      ]
+    }
+  ]
+}
