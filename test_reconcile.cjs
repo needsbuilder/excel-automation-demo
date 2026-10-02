@@ -1,0 +1,18 @@
+const assert=require('node:assert/strict');
+const {orders,payments,reconcile,toCSV}=require('./docs/reconcile.js');
+const original=JSON.stringify({orders,payments});
+const result=reconcile(orders,payments);
+assert.deepEqual(result.rows.map(r=>[r.id,r.status]),[['D100','일치'],['D101','금액 차이'],['D102','미입금'],['D103','중복 ID 확인'],['D999','주문 없는 입금']]);
+assert.equal(result.orderTotal,140000);assert.equal(result.paymentTotal,109000);
+assert.deepEqual(result.rows[3].payments.map(p=>p.row),[4,5]);
+const changed=payments.map((p,i)=>({...p,amount:i===1?20000:p.amount}));
+assert.equal(reconcile(orders,changed).paymentTotal,110000);
+assert.equal(reconcile(orders,changed).rows.filter(r=>r.status==='일치').length,2);
+assert.equal(reconcile(orders,[{id:'D100',amount:0}]).rows[0].status,'금액 차이');
+assert.equal(reconcile([...orders,{...orders[0]}],payments).rows[0].status,'중복 ID 확인');
+for(const amount of [-1,1.5,NaN,Number.MAX_SAFE_INTEGER+1]) assert.throws(()=>reconcile(orders,[{id:'D100',amount}]));
+assert.throws(()=>reconcile(orders,[{id:'',amount:1}]));
+assert.throws(()=>reconcile([{id:'a',amount:Number.MAX_SAFE_INTEGER},{id:'b',amount:1}],[]));
+assert.equal(JSON.stringify({orders,payments}),original);
+assert.ok(toCSV([['=1+1','"quoted"','two\nlines']]).includes('"\'=1+1","""quoted""","two\nlines"'));
+console.log(JSON.stringify({baseline_statuses:result.rows.map(r=>[r.id,r.status]),order_total:140000,payment_total:109000,changed_payment_total:110000,changed_matches:2,source_unchanged:true,invalid_amounts_rejected:true,duplicate_order_detected:true,csv_formula_escaped:true},null,2));

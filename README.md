@@ -34,3 +34,11 @@ python3 merge_demo.py sample/input my-result
 재실행 결과 일치, 원본 해시 유지, ID 충돌·날짜 오류·수량 오류·열 누락을 검증했습니다. XLSX 확인 파일은 요약 수식 재계산을 별도로 검증했으며 실제 Excel 앱에서 실행한 VBA 예시는 아닙니다. 브라우저 데모도 VBA나 Apps Script 실행을 의미하지 않습니다.
 
 실제 업무에는 열 이름·중복 기준·예외 처리·실행 환경에 맞춘 조정이 필요합니다. 니즈랩의 엑셀·구글시트 서비스는 [크몽 공개 페이지](https://kmong.com/gig/824498)에서 확인할 수 있습니다.
+
+## 주문·입금 CSV 대조 예시
+
+[브라우저에서 실행](https://needsbuilder.github.io/excel-automation-demo/reconcile-example.html) · [가상 원본 및 기대결과 ZIP](docs/downloads/reconcile-sample.zip) · [검증 결과](docs/reconcile-validation.json)
+
+가상 주문 4건과 입금 5건을 정확한 주문ID로 대조합니다. 주문 합계 140,000원, 입금 합계 109,000원이며 일치 1건과 확인할 ID 4건(금액 차이·미입금·중복 ID·주문 없는 입금)을 구분합니다. D101의 입금액을 20,000원으로 바꾸면 일치 2건과 입금 합계 110,000원입니다.
+
+각 파일에 주문ID가 한 번만 있다는 규칙을 사용하므로 합계가 같은 분할입금도 중복 확인 대상으로 남깁니다. 수수료·환불·통화 변환·유사 이름 매칭은 지원하지 않습니다. 브라우저 샘플에는 파일 업로드 기능이 없으며 계산 결과 CSV만 내려받을 수 있습니다. 고객 자료나 납품 실적이 아니고, 실제 Excel·VBA·Apps Script 실행은 미검증입니다. `node test_reconcile.cjs`로 기준값·입력 변경·잘못된 금액·중복 주문·원본 보존·CSV 수식 문자열 처리를 확인합니다.

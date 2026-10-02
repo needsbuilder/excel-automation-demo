@@ -1,0 +1,56 @@
+{
+  "baseline_statuses": [
+    [
+      "D100",
+      "일치"
+    ],
+    [
+      "D101",
+      "금액 차이"
+    ],
+    [
+      "D102",
+      "미입금"
+    ],
+    [
+      "D103",
+      "중복 ID 확인"
+    ],
+    [
+      "D999",
+      "주문 없는 입금"
+    ]
+  ],
+  "order_total": 140000,
+  "payment_total": 109000,
+  "changed_payment_total": 110000,
+  "changed_matches": 2,
+  "source_unchanged": true,
+  "invalid_amounts_rejected": true,
+  "duplicate_order_detected": true,
+  "csv_formula_escaped": true,
+  "checked_at": "2026-10-02T09:09:35.103795+00:00",
+  "excel_app_executed": false,
+  "browser": {
+    "at": "2026-10-02T09:12:33.293Z",
+    "baseline": {
+      "matches": "1",
+      "review": "4",
+      "total": "109,000",
+      "rows": "D100\t30,000\t30,000\t일치\t주문 2 / 입금 2\nD101\t20,000\t19,000\t금액 차이\t주문 3 / 입금 3\nD102\t40,000\t—\t미입금\t주문 4 / 입금 없음\nD103\t50,000\t50,000\t중복 ID 확인\t주문 5 / 입금 4·5\nD999\t—\t10,000\t주문 없는 입금\t주문 없음 / 입금 6"
+    },
+    "changed": {
+      "matches": "2",
+      "review": "3",
+      "total": "110,000",
+      "rows": "D100\t30,000\t30,000\t일치\t주문 2 / 입금 2\nD101\t20,000\t20,000\t일치\t주문 3 / 입금 3\nD102\t40,000\t—\t미입금\t주문 4 / 입금 없음\nD103\t50,000\t50,000\t중복 ID 확인\t주문 5 / 입금 4·5\nD999\t—\t10,000\t주문 없는 입금\t주문 없음 / 입금 6"
+    },
+    "invalid": {
+      "state": "입력 확인",
+      "disabled": true,
+      "rows": 0
+    }
+  },
+  "downloaded_csv_matches_changed_case": true,
+  "visual_screenshot_verified": false
+}
