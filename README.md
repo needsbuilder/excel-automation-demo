@@ -1,0 +1,30 @@
+# 니즈랩 파일 취합 예시
+
+동일한 열 구조를 가진 CSV 파일을 취합하고 중복·입력 오류를 별도 내역으로 남기는 작은 예시입니다. **가상 데이터로 만든 작업 예시이며 실제 고객 자료나 납품 실적이 아닙니다.**
+
+## 직접 확인
+
+- [브라우저에서 예시 실행](https://needsbuilder.github.io/excel-automation-demo/)
+- [예시 파일 ZIP](https://github.com/needsbuilder/excel-automation-demo/releases/latest/download/excel-merge-sample.zip)
+- [검증된 결과](sample/output/취합결과.csv) · [제외 내역](sample/output/제외내역.csv)
+
+Python 3만 있으면 추가 라이브러리 없이 실행할 수 있습니다. 내려받은 폴더에서 다음 명령을 실행합니다.
+
+```sh
+python3 merge_demo.py sample/input my-result
+```
+
+입력 열은 `주문ID,일자,지점,상품,수량,단가`입니다. UTF-8 CSV이며 날짜는 YYYY-MM-DD, 수량은 양의 정수, 단가는 0 이상의 정수입니다.
+
+| 확인 항목 | 가상 예시 결과 |
+| --- | --- |
+| 원본 | CSV 3개, 총 9행 |
+| 정상 | 7행 |
+| 제외 | 동일 주문 중복 1행, 수량 오류 1행 |
+| 합계 | 132,000원 |
+| 추적 | 결과마다 원본 파일과 행 번호 기록 |
+| 원본 | 읽기만 하며 변경하지 않음 |
+
+재실행 결과 일치, 원본 해시 유지, ID 충돌·날짜 오류·수량 오류·열 누락을 검증했습니다. XLSX 확인 파일은 요약 수식 재계산을 별도로 검증했으며 실제 Excel 앱에서 실행한 VBA 예시는 아닙니다. 브라우저 데모도 VBA나 Apps Script 실행을 의미하지 않습니다.
+
+실제 업무에는 열 이름·중복 기준·예외 처리·실행 환경에 맞춘 조정이 필요합니다. 니즈랩의 엑셀·구글시트 서비스는 [크몽 공개 페이지](https://kmong.com/gig/824498)에서 확인할 수 있습니다.

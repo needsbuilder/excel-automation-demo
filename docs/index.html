@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CSV 파일 취합 실행 예시 | 니즈랩</title>
+  <meta name="description" content="가상 CSV 3개를 취합하고 중복·입력 오류를 분리하는 니즈랩 기술 작업 예시. 브라우저 안에서 직접 실행하고 결과를 확인하세요.">
+  <meta name="theme-color" content="#101714">
+  <link rel="stylesheet" href="style.css">
+  <script src="merge.js" defer></script>
+  <script src="demo.js" defer></script>
+</head>
+<body>
+  <header class="shell masthead"><a href="https://github.com/needsbuilder/excel-automation-demo">NEEDSLAB / 니즈랩</a><span>CSV MERGE DEMO</span></header>
+  <main class="shell">
+    <section class="hero">
+      <p class="eyebrow">가상 데이터로 만든 작업 예시</p>
+      <h1>파일은 합치고,<br>오류는 따로 확인.</h1>
+      <p class="intro">같은 열의 CSV를 모아 합계를 계산합니다.<br>중복 주문과 잘못된 수량은 제외 사유를 남깁니다.</p>
+      <div class="actions"><button id="run" type="button">샘플 취합 실행 <span aria-hidden="true">↗</span></button><a class="secondary" href="downloads/excel-merge-sample.zip" download>입력·결과 파일 받기 ↓</a></div>
+      <p class="micro">파일은 브라우저 안에서만 처리합니다. 서버에 전송하지 않습니다.</p>
+    </section>
+    <section class="workspace" aria-label="파일 취합 데모">
+      <div class="input-pane">
+        <div class="section-label"><span>01 / INPUT</span><span id="file-count">가상 CSV 3개</span></div>
+        <h2>같은 열 구조의 파일</h2>
+        <p>주문ID · 일자 · 지점 · 상품 · 수량 · 단가</p>
+        <div id="files" class="files"></div>
+        <details class="upload"><summary>내 CSV로 확인하기</summary><p>UTF-8, 같은 열·순서의 CSV를 선택하세요. 총 1MB 이하, 최대 10개입니다. 원본 파일은 변경하지 않습니다.</p><label for="upload">CSV 파일 선택</label><input id="upload" type="file" accept=".csv,text/csv" multiple><button class="quiet" id="reset" type="button">가상 샘플로 돌아가기</button></details>
+      </div>
+      <div class="output-pane">
+        <div class="section-label"><span>02 / RESULT</span><span id="state">실행 전</span></div>
+        <h2>취합 결과</h2>
+        <div class="stats"><div><strong id="accepted">—</strong><span>정상 행</span></div><div><strong id="excluded">—</strong><span>제외 행</span></div><div><strong id="total">—</strong><span>합계 / 원</span></div></div>
+        <p id="message" role="status" aria-live="polite">샘플에는 중복 주문 1행과 수량 오류 1행이 들어 있습니다.</p>
+        <div class="table-wrap"><table><caption>지점별 합계</caption><thead><tr><th scope="col">지점</th><th scope="col">금액 / 원</th></tr></thead><tbody id="branches"><tr><td colspan="2">실행하면 결과가 표시됩니다.</td></tr></tbody></table></div>
+        <div class="table-wrap"><table><caption>제외 내역</caption><thead><tr><th scope="col">원본 · 행</th><th scope="col">사유</th></tr></thead><tbody id="exceptions"><tr><td colspan="2">실행하면 제외 사유가 표시됩니다.</td></tr></tbody></table></div>
+        <button id="download" class="quiet" type="button" disabled>내 실행 결과 CSV 받기 ↓</button>
+      </div>
+    </section>
+    <section class="notes">
+      <div><p class="eyebrow">검증한 것</p><h2>결과의 출처까지<br>확인할 수 있도록.</h2></div>
+      <ul><li>원본 파일을 읽기만 하고 보존합니다.</li><li>정상 결과마다 원본 파일·행 번호를 남깁니다.</li><li>동일 주문ID의 값이 다르면 충돌로 분리합니다.</li><li>잘못된 날짜·수량·단가는 제외 사유를 남깁니다.</li></ul>
+    </section>
+    <p class="boundary">실제 고객 자료나 납품 실적이 아닌 기술 작업 예시입니다. 브라우저 데모와 Python 표준 라이브러리로 확인했으며 VBA·Apps Script 실행 예시는 아닙니다. 실제 파일의 열 구조나 중복 기준이 다르면 규칙을 조정해야 합니다.</p>
+  </main>
+  <footer class="shell"><span>NEEDSLAB · 2026</span><a href="https://github.com/needsbuilder/excel-automation-demo">실행 코드와 검증 내용 보기 ↗</a></footer>
+</body>
+</html>
