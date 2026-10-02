@@ -2,7 +2,7 @@
 
 [내 업무와 비슷한 예시 고르기 · 문의 전 준비 안내](CONSULTATION.md) · [빈 문의 양식](docs/downloads/consultation-template.txt)
 
-다섯 예시의 차이와 실제 작업을 의뢰할 때 필요한 자료·검수 기준을 정리했습니다. 고객 파일은 공개 저장소에 올리지 않고 크몽 메시지로 받습니다.
+여섯 예시의 차이와 실제 작업을 의뢰할 때 필요한 자료·검수 기준을 정리했습니다. 고객 파일은 공개 저장소에 올리지 않고 크몽 메시지로 받습니다.
 
 ## 상품코드별 단가 조회 Python 예시
 
@@ -67,3 +67,10 @@ Python 표준 라이브러리로 기준값·입력 변경·잘못된 수량·중
 ### 재고·예약 수량을 브라우저에서 확인
 
 [재고 점검 실행 예시](https://needsbuilder.github.io/excel-automation-demo/inventory-example.html)에서 기존 가상 재고 7행을 계산합니다. 정상 3행·확인 4행·부족 2품목 15개이며 S002 재고를 14개로 바꾸면 부족 합계가 8개가 됩니다. 변경 뒤 재실행해야 CSV를 받을 수 있습니다. Python과 같은 입력·규칙을 대조했으며 실제 Excel·VBA·Apps Script 및 재고 시스템 연동은 미검증입니다. 발주를 실행하지 않습니다.
+
+
+## 홈페이지 제작 문의 준비
+
+[범위·준비자료·완료 확인 기준](https://needsbuilder.github.io/excel-automation-demo/website-consultation.html) · [빈 문의 양식](docs/downloads/website-consultation-template.txt)
+
+상품 #740393의 2026-10-03 공개 조건을 확인해 랜딩·다중 페이지·회원/예약/결제의 차이와 문의 양식을 정리했습니다. 가격과 일정은 최신 크몽 상품과 합의한 범위에서 확인하며 고객 자료는 크몽 메시지로만 받습니다. 실제 고객 자료나 납품 실적이 아닙니다.
