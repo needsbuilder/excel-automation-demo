@@ -20,6 +20,12 @@
 
 [입력·코드·결과 ZIP 받기](https://needsbuilder.github.io/excel-automation-demo/downloads/monthly-worklog-sample.zip)
 
+## 브라우저에서 확인하기
+
+[월별 업무시간 실행 예시](https://needsbuilder.github.io/excel-automation-demo/monthly-worklog-example.html)에서 설치 없이 가상 9건을 계산할 수 있습니다. 첫 기록의 날짜와 시간만 바꿀 수 있으며 나머지 8건은 고정됩니다. 최신 결과는 JSON으로 받습니다. 입력을 변경하면 이전 결과와 다운로드를 지우고 다시 실행하도록 안내합니다. 고객 파일 업로드·서버 전송은 없습니다.
+
+브라우저 계산은 Python과 10개 입력 사례 및 입력 한도를 대조했습니다. 실제 Excel·VBA·Apps Script 실행 검증을 뜻하지 않습니다.
+
 ## 실행과 검증
 
 Python 3 표준 라이브러리로 실행합니다. 추가 도구 결제나 설치 패키지는 없습니다. ZIP을 풀고 해당 폴더에서 실행하세요.
