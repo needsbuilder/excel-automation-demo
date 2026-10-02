@@ -1,0 +1,129 @@
+{
+  "fictional_example": true,
+  "before_rows": 8,
+  "after_rows": 6,
+  "counts": {
+    "신규": 1,
+    "현재 목록에 없음": 1,
+    "변경": 2,
+    "동일": 1,
+    "확인 필요": 3
+  },
+  "rows": [
+    {
+      "code": "",
+      "status": "확인 필요",
+      "reason": "상품코드 없음",
+      "before_lines": [
+        9
+      ],
+      "after_lines": [],
+      "before_name": "이름만 있는 상품",
+      "after_name": "",
+      "before_price": 900,
+      "after_price": null
+    },
+    {
+      "code": "0001",
+      "status": "변경",
+      "reason": "단가 변경",
+      "before_lines": [
+        2
+      ],
+      "after_lines": [
+        2
+      ],
+      "before_name": "연필",
+      "after_name": "연필",
+      "before_price": 1000,
+      "after_price": 1200
+    },
+    {
+      "code": "0002",
+      "status": "동일",
+      "reason": "",
+      "before_lines": [
+        3
+      ],
+      "after_lines": [
+        3
+      ],
+      "before_name": "공책",
+      "after_name": "공책",
+      "before_price": 3000,
+      "after_price": 3000
+    },
+    {
+      "code": "0003",
+      "status": "현재 목록에 없음",
+      "reason": "",
+      "before_lines": [
+        4
+      ],
+      "after_lines": [],
+      "before_name": "가방",
+      "after_name": "",
+      "before_price": 10000,
+      "after_price": null
+    },
+    {
+      "code": "0004",
+      "status": "변경",
+      "reason": "상품명 변경 / 단가 변경",
+      "before_lines": [
+        5
+      ],
+      "after_lines": [
+        4
+      ],
+      "before_name": "파랑 파일",
+      "after_name": "초록 파일",
+      "before_price": 2000,
+      "after_price": 2500
+    },
+    {
+      "code": "0005",
+      "status": "확인 필요",
+      "reason": "이전 상품코드 중복",
+      "before_lines": [
+        6,
+        7
+      ],
+      "after_lines": [
+        5
+      ],
+      "before_name": "펜",
+      "after_name": "펜",
+      "before_price": 500,
+      "after_price": 500
+    },
+    {
+      "code": "0006",
+      "status": "확인 필요",
+      "reason": "현재 단가는 0 이상의 정수 필요",
+      "before_lines": [
+        8
+      ],
+      "after_lines": [
+        6
+      ],
+      "before_name": "자",
+      "after_name": "자",
+      "before_price": 700,
+      "after_price": null
+    },
+    {
+      "code": "0007",
+      "status": "신규",
+      "reason": "",
+      "before_lines": [],
+      "after_lines": [
+        7
+      ],
+      "before_name": "",
+      "after_name": "지우개",
+      "before_price": null,
+      "after_price": 800
+    }
+  ]
+}

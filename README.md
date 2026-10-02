@@ -2,7 +2,7 @@
 
 [내 업무와 비슷한 예시 고르기 · 문의 전 준비 안내](CONSULTATION.md) · [빈 문의 양식](docs/downloads/consultation-template.txt)
 
-여섯 예시의 차이와 실제 작업을 의뢰할 때 필요한 자료·검수 기준을 정리했습니다. 고객 파일은 공개 저장소에 올리지 않고 크몽 메시지로 받습니다.
+일곱 예시의 차이와 실제 작업을 의뢰할 때 필요한 자료·검수 기준을 정리했습니다. 고객 파일은 공개 저장소에 올리지 않고 크몽 메시지로 받습니다.
 
 ## 상품코드별 단가 조회 Python 예시
 
@@ -74,3 +74,9 @@ Python 표준 라이브러리로 기준값·입력 변경·잘못된 수량·중
 [범위·준비자료·완료 확인 기준](https://needsbuilder.github.io/excel-automation-demo/website-consultation.html) · [빈 문의 양식](docs/downloads/website-consultation-template.txt)
 
 상품 #740393의 2026-10-03 공개 조건을 확인해 랜딩·다중 페이지·회원/예약/결제의 차이와 문의 양식을 정리했습니다. 가격과 일정은 최신 크몽 상품과 합의한 범위에서 확인하며 고객 자료는 크몽 메시지로만 받습니다. 실제 고객 자료나 납품 실적이 아닙니다.
+
+## 두 상품목록의 변경 비교
+
+[가상 CSV·실행 코드·검증 기준](catalog-change-example/README.md) · [샘플 ZIP](docs/downloads/catalog-change-sample.zip)
+
+이전 8행·현재 6행을 정확한 상품코드로 비교해 신규 1건, 현재 목록에 없음 1건, 변경 2건, 동일 1건, 확인 필요 3건을 구분합니다. 중복 코드와 잘못된 단가는 신규·누락으로 오판하지 않고 출처 행을 남깁니다. Python 표준 라이브러리의 고정 기대값·입력 변경·앞자리 0·원본과 기존 결과 보존·CSV 수식 문자 보호를 검증했습니다. 실제 Excel·VBA·Apps Script 및 외부 상품 시스템 실행은 미검증입니다. 가상 데이터로 만든 작업 예시입니다.
