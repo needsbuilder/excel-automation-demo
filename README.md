@@ -1,5 +1,9 @@
 # 니즈랩 파일 취합 예시
 
+[내 업무와 비슷한 예시 고르기 · 문의 전 준비 안내](CONSULTATION.md) · [빈 문의 양식](docs/downloads/consultation-template.txt)
+
+다섯 예시의 차이와 실제 작업을 의뢰할 때 필요한 자료·검수 기준을 정리했습니다. 고객 파일은 공개 저장소에 올리지 않고 크몽 메시지로 받습니다.
+
 ## 상품코드별 단가 조회 Python 예시
 
 [가상 원본·실행 코드·검증 내용](price-lookup-example/README.md) · [샘플 ZIP](docs/downloads/price-lookup-sample.zip)
