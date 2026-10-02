@@ -1,0 +1,22 @@
+{
+  "verified_at": "2026-10-02T12:49:28.859714+00:00",
+  "fictional_example": true,
+  "tests": "4 acceptance tests passed",
+  "baseline": {
+    "input_orders": 8,
+    "accepted": 3,
+    "review": 5,
+    "invalid_price_rows": 2,
+    "total_krw": 71000
+  },
+  "changed_unit_price_0001": {
+    "unit_price": 13000,
+    "total_krw": 73000
+  },
+  "leading_zero_codes_preserved": true,
+  "source_hashes_preserved": true,
+  "existing_output_preserved": true,
+  "invalid_header_no_output": true,
+  "excel_app_executed": false,
+  "external_system_integrated": false
+}
